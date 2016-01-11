@@ -1,3 +1,5 @@
+import java.lang.Math;
+
 public class Parcel {
   private final int mLengthInCM;
   private final int mWidthInCM;
@@ -31,9 +33,18 @@ public class Parcel {
     return mLengthInCM * mWidthInCM * mHeightInCM;
   }
 
-  public double cost_to_ship(double distanceInKM) {
-    double cost = (distanceInKM / 100) * this.volume() * (mWeightInKilos / 10) * 1.15;
-    return cost;
+  public int surfaceAreaInCM2() {
+    return 2 * ((mWidthInCM * mLengthInCM) + (mHeightInCM * mLengthInCM) + (mHeightInCM * mWidthInCM));
+  }
+
+  public int cost_to_giftwrap() {
+    return Integer.valueOf((int)Math.round(this.surfaceAreaInCM2() / 2));
+  }
+
+  public int cost_to_ship(int distanceToShipInKM) {
+    double cost = (distanceToShipInKM / 10) * this.volume() * mWeightInKilos;
+    Integer costInCents = Integer.valueOf((int)Math.round(cost));
+    return costInCents;
   }
 
   public boolean isEligibleForLowWeightDiscount() {

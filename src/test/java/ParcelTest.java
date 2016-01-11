@@ -27,5 +27,37 @@ public class ParcelTest {
     assertEquals(10, testParcel.getWeight());
   }
 
+  @Test
+  public void volume_returnsCorrectVolume_6() {
+    Parcel testParcel = new Parcel(1, 2, 3, 99);
+    assertEquals(6, testParcel.volume());
+  }
+
+  @Test
+  public void cost_to_ship_returnsCorrectCostInCents_1200() {
+    Parcel testParcel = new Parcel(1, 2, 3, 20);
+    Integer expectedResult = 1200;
+    Integer actualResult = testParcel.cost_to_ship(100);
+    assertEquals(expectedResult, actualResult);
+  }
+
+  @Test
+  public void isEligibleForLowWeightDiscount_returnsCorrectResponse_true() {
+    Parcel testParcel = new Parcel(1, 2, 3, 1);
+    assertEquals(true, testParcel.isEligibleForLowWeightDiscount());
+  }
+
+  @Test
+  public void cost_to_giftwrap_returnsCorrectCostInCents_300() {
+    Parcel testParcel = new Parcel(10, 10, 10, 35);
+    assertEquals(300, testParcel.cost_to_giftwrap());
+  }
+
+  @Test
+  public void isEligibleForLowWeightDiscount_returnsCorrectResponse_false() {
+    Parcel testParcel = new Parcel (1, 2, 3, 10);
+    assertEquals(false, testParcel.isEligibleForLowWeightDiscount());
+  }
+
 
 }
