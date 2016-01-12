@@ -1,25 +1,19 @@
-# Java/Spark/Velocity File Structure Template
+# Shipping Calculator
 
-#### January 5, 2016
-
-#### By Midori Bowen and Jeffrey Ruder
+#### January 1, 2016
 
 ## Description
 
-This is a template file structure for use in Epicodus Java/Spark/Velocity projects.
+Shipping Calculator
 
 ## How To Use
 
 * Make a directory for your project and initialize a git repository.
-* Pull this file structure template from GitHub: `git pull https://github.com/JeffreyRuder/java-spark-template.git`
+* Pull this file structure template from GitHub: `git pull https://github.com/JeffreyRuder/parcel.git`
 
 OR:
 
-* Fork this repository from GitHub and rename it
-
-## Please Make This Better
-
-Please fork this repository and send a pull request if something in here could be better.
+* Fork this repository from GitHub and clone it to your computer
 
 ## Technologies Used
 
