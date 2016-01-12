@@ -38,11 +38,11 @@ public class Parcel {
   }
 
   public int cost_to_giftwrap() {
-    return Integer.valueOf((int)Math.round(this.surfaceAreaInCM2() / 2));
+    return 500;
   }
 
   public int cost_to_ship(int distanceToShipInKM) {
-    double cost = (distanceToShipInKM / 100) * this.volume() * mWeightInKilos;
+    double cost = ((200 + (distanceToShipInKM / 200.0)) * mWeightInKilos);
     Integer costInCents = Integer.valueOf((int)Math.round(cost));
     return costInCents;
   }
