@@ -1,0 +1,29 @@
+<h1>Shipping Calculator</h1>
+<h3>Enter the dimensions of your package to calculate shipping cost</h3>
+
+<form action='/results' method="post">
+  <div class="form-group">
+    <label for="length">Length in Centimeters</label>
+    <input id="length" name="length" class="form-control" type="number" min="1">
+
+    <label for="width">Width in Centimeters</label>
+    <input id="width" name="width" class="form-control" type="number" min="1">
+
+    <label for="height">Height in Centimeters</label>
+    <input id="height" name="height" class="form-control" type="number" min="1">
+
+    <label for="weight">Weight in Kilograms</label>
+    <input id="weight" name="weight" class="form-control" type="number" min="1">
+
+    <label for="distance">Distance to Ship in Kilometers</label>
+    <input id="distance" name="distance" class="form-control" type="number" min="1"><br>
+
+    <label for="wrap">Do you want your package gift-wrapped?</label>
+    <input id="wrap" name="wrap" value="Yes" class="form-control" type="radio"> Yes
+    <input name="wrap" value="No" class="form-control" type="radio" checked> No<br>
+
+    <button type="submit" class="btn btn-default">Go!</button>
+  </div>
+
+
+</form>

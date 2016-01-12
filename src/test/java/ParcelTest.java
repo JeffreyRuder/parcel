@@ -34,9 +34,9 @@ public class ParcelTest {
   }
 
   @Test
-  public void cost_to_ship_returnsCorrectCostInCents_1200() {
+  public void cost_to_ship_returnsCorrectCostInCents_120() {
     Parcel testParcel = new Parcel(1, 2, 3, 20);
-    Integer expectedResult = 1200;
+    Integer expectedResult = 120;
     Integer actualResult = testParcel.cost_to_ship(100);
     assertEquals(expectedResult, actualResult);
   }

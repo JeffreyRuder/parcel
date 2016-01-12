@@ -42,7 +42,7 @@ public class Parcel {
   }
 
   public int cost_to_ship(int distanceToShipInKM) {
-    double cost = (distanceToShipInKM / 10) * this.volume() * mWeightInKilos;
+    double cost = (distanceToShipInKM / 100) * this.volume() * mWeightInKilos;
     Integer costInCents = Integer.valueOf((int)Math.round(cost));
     return costInCents;
   }

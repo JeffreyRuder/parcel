@@ -1,0 +1,25 @@
+<h1>Your Parcel</h1>
+<p>Length: $customerParcel.getLength() cm</p>
+<p>Width: $customerParcel.getWidth() cm</p>
+<p>Height: $customerParcel.getHeight() cm</p>
+<p>Weight: $customerParcel.getWeight() kg</p>
+
+<h1>Your Shipping Request</h1>
+<p>Distance to Ship: $customerShippingRequest.getDistance() km</p>
+#if ($customerShippingRequest.giftWrapRequested())
+  <p>You requested gift wrap which will add $wrapcost to your total.</p>
+#else
+  <p>You did not request gift wrap.</p>
+#end
+
+<h1>Cost to Ship</h1>
+<p>Base Shipping Cost: $basecost </p>
+
+#if ($customerShippingRequest.giftWrapRequested())
+  <p>Gift Wrap Cost: $wrapcost </p>
+#end
+
+<p>Total Cost: $totalasstring </p>
+
+<br>
+<a href="/" class="btn btn-default">Check Another Parcel</a>
