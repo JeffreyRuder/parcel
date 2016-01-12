@@ -32,7 +32,7 @@ public class IntegrationTest extends FluentTest {
     fill("#weight").with("5");
     fill("#distance").with("100");
     submit(".btn");
-    assertThat(pageSource()).contains("Cost to Ship: 5000");
+    assertThat(pageSource()).contains("Base Shipping Cost: $50.00");
   }
 
 }
