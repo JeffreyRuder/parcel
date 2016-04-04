@@ -4,7 +4,7 @@
 
 ## Description
 
-Shipping Calculator
+A simple Spark app to calculate the shipping cost for a parcel based on various user inputs.
 
 ## How To Use
 
